@@ -43,46 +43,37 @@ inquirer
     .then((response) =>
     {
         const readmeTemplate=
-        `The following readme was generated using index.js and an execution of a node Terminal.
-        (insert License)
+`The following readme was generated using index.js and an execution of a node Terminal.
+
+ ${response.license}
         
-        # (Insert Project Title)
+# ${response.title}
         
-        ## Description  
-            (blah blah blah, Yadda yadda yadda/ Insert description)
+## Description  
+    ${response.description}
                 
-        ## Table of Contents
-            -installation guide
-            -usage
-            -credits
-            -license
+## Table of Contents
+   -installation guide
+    -usage
+    -credits
+    -license
         
-        ## Installation guide
-            (Insert Installation guide)
-            The creation of this file required the installation of the following packages: colors and inquirer.
-            in order to utilize the packages to install enter the following commands with a terminal:
-            npm init -y
-            npm install inquirer@8.2.4
-            npm install colors
+ ## Installation guide
+    ${response.installation}
         
-        ## Usage    
-            (Insert Usage Information)
-            This repository is meant to demonstarte the ability of using a terminal. After installation open a terminal and enter the following command.
-            node index.js
-            The Terminal will then ask for informtation that will alter the information below within the next section.
+## Usage    
+    ${response.usage}
+    
+## Credits
+   ${response.credits}
         
-        ## Credits
-            (Insert Credits)
-            This Readme file was created by (Insert Name).
-            More of their work can be found at (Insert Link).
+## License
+    This project is licensed with ${response.license}. To learn about further accessbility options, visit https://choosealicense.com/licenses/${response.license}/
         
-        ## License
-            This project is licensed with (insert license). To learn about further accessbility options, visit https://choosealicense.com/licenses/(insert license)/
-        
-        ## Questions
-            for Further questions contact (Insert Name) at the following email (Insert EmailLink)
-        
-            `;
+## Questions
+    for Further questions contact ${response.name} at the following site ${response.link}
+         
+        `;
     
         fs.writeFile('README.md',readmeTemplate,(err) =>
         err ? console.error(err) : console.log('The file has been constructed')
@@ -91,14 +82,15 @@ inquirer
     
 );
 
-// const readmeTemplate=
-// `The following readme was generated using index.js and an execution of a node Terminal.
-// (insert License)
+// The following is are default responses to test the function of the project.
 
-// # (Insert Project Title)
+
+// (insert License) - mit 
+
+// # (Insert Project Title) - TerminalWebsite
 
 // ## Description  
-//     (blah blah blah, Yadda yadda yadda/ Insert description)
+//     (Insert description) - blah blah blah, Yadda yadda yadda
         
 // ## Table of Contents
 //     -installation guide
@@ -107,7 +99,7 @@ inquirer
 //     -license
 
 // ## Installation guide
-//     (Insert Installation guide)
+//     (Insert Installation guide) -
 //     The creation of this file required the installation of the following packages: colors and inquirer.
 //     in order to utilize the packages to install enter the following commands with a terminal:
 //     npm init -y
@@ -115,15 +107,15 @@ inquirer
 //     npm install colors
 
 // ## Usage    
-//     (Insert Usage Information)
+//     (Insert Usage Information) -
 //     This repository is meant to demonstarte the ability of using a terminal. After installation open a terminal and enter the following command.
 //     node index.js
 //     The Terminal will then ask for informtation that will alter the information below within the next section.
 
 // ## Credits
-//     (Insert Credits)
-//     This Readme file was created by (Insert Name).
-//     More of their work can be found at (Insert Link).
+//     (Insert Credits) -
+//     This Readme file was created by Jemeric Thomas.
+//     project uses inquirer, colors, and node as a terminal.
 
 // ## License
 //     This project is licensed with (insert license). To learn about further accessbility options, visit https://choosealicense.com/licenses/(insert license)/
