@@ -53,10 +53,11 @@ inquirer
     ${response.description}
                 
 ## Table of Contents
-   -installation guide
-    -usage
-    -credits
-    -license
+   -Installation-guide [link](#Installation guide)
+    -usage [link](#Usage)
+    -credits [link](#Credits)
+    -license [link](#License)
+    -Questions [link](#Questions)
         
  ## Installation guide
     ${response.installation}

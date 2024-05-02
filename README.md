@@ -8,12 +8,13 @@ The following readme was generated using index.js and an execution of a node Ter
     This project demonstrates the use of Packackging along with Modifying information using a back-end terminal.
                 
 ## Table of Contents
-   -installation guide
-    -usage
-    -credits
-    -license
+   -installation-guide  [link](#Installation-guide)   
+    -usage    [link](#Usage)
+    -credits    [link](#Credits)
+    -license    [link](#License)
+    -questions [link](#Questions)
         
- ## Installation guide
+ ## Installation-guide
     To use the following files, use (npm init -y), to install the inquirer use (npm i inquirer)
         
 ## Usage    
